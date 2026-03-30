@@ -1,0 +1,14 @@
+# Run this gpunit loccaly by calling:
+# ant -f ${GPUNIT_HOME}/build.xml -Dgpunit.diffStripTrailingCR="--strip-trailing-cr" -Dgp.host="127.0.0.1" -Dgp.url="http://127.0.0.1:8080" -Dgp.user="edjuaro@gmail.com" -Dgp.password="" -Dgpunit.testfolder=`pwd` gpunit
+# OR using gp-beta-ami:
+# ant -f ${GPUNIT_HOME}/build.xml -Dgpunit.diffStripTrailingCR="--strip-trailing-cr" -Dgp.host="gp-beta-ami.genepattern.org" -Dgp.url="https://gp-beta-ami.genepattern.org" -Dgp.user="edjuaro" -Dgp.password="**PUT_PASSWORD_HERE" -Dgpunit.testfolder=`pwd` gpunit
+
+name: "MultiQC"
+module: MultiQC
+description: "MultiQC is a tool to create a single interactive HTML report aggregating quality control metrics from multiple bioinformatics analyses across many samples."
+params:
+    input.data: "https://datasets.genepattern.org/data/test_data/MultiQC/multiqc_data.zip"
+    report.title: "MultiQC GPUnit"
+    report.comment: "GPUnit test for MultiQC module"
+assertions:
+        jobStatus: success

@@ -1,0 +1,50 @@
+[
+    {
+        "name": "Required Input",
+        "description": "Provide the input data archive containing output files from one or more bioinformatics tools. MultiQC will automatically detect and parse all recognized file types.",
+        "parameters": [
+            "input.data"
+        ],
+        "hidden": false
+    },
+    {
+        "name": "Report Settings",
+        "description": "Customize the appearance and content of the HTML report, including its title, comment annotation, and output filename.",
+        "parameters": [
+            "report.title",
+            "report.comment",
+            "output.filename"
+        ],
+        "hidden": false
+    },
+    {
+        "name": "Module Selection",
+        "description": "Control which bioinformatics tool modules are included in or excluded from the report. Leave blank to auto-detect all supported tools.",
+        "parameters": [
+            "modules",
+            "exclude.modules"
+        ],
+        "hidden": false
+    },
+    {
+        "name": "Output Options",
+        "description": "Configure output data format, plot rendering style, image export, and sample naming for the generated report.",
+        "parameters": [
+            "data.format",
+            "flat.plots",
+            "export.plots",
+            "prepend.dirs",
+            "sample.names.file"
+        ],
+        "hidden": false
+    },
+    {
+        "name": "Advanced Configuration",
+        "description": "Advanced settings for expert users. Supply a custom MultiQC YAML configuration file or provide inline YAML configuration overrides to fine-tune report behavior.",
+        "parameters": [
+            "config.file",
+            "extra.config"
+        ],
+        "hidden": true
+    }
+]
